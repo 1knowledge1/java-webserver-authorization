@@ -27,6 +27,9 @@ public class SignUpServlet extends  HttpServlet {
         }
         else {
             accountService.addNewUser(new UserProfile(login, pass, null));
+            response.setContentType("text/html;charset=utf-8");
+            response.getWriter().println("You are registered successfully. Hello, " + login);
+            response.setStatus(HttpServletResponse.SC_OK);
         }
     }
 
