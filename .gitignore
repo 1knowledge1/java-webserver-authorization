@@ -1,3 +1,4 @@
 /java-webserver-authorization.iml
 /target/
 /.idea/
+*.lst
