@@ -19,6 +19,8 @@ public class SignUpServlet extends  HttpServlet {
                        HttpServletResponse response) throws ServletException, IOException {
         String login = request.getParameter("login");
         String pass = request.getParameter("password");
+        System.out.println("Новый пользователь:\n" + request.getRemoteAddr());
+        
 
         if (login == null || pass == null || accountService.getUserByLogin(login) != null) {
             response.setContentType("text/html;charset=utf-8");
